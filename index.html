@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Anywhere - Slicing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Product web page design by Raveen Panditha on Figma
+    https://www.figma.com/community/file/1079006962944591950
+    Slicing to landing page by adisaktijrs -->
+    <main>
+        <div class="side-header">
+            <div class="side-header__logo">
+                <a href="#">Aer</a>
+            </div>
+            <div class="side-header__socials">
+                <div class="side-header__socials--reverse">
+                    <a href="#">Fb</a>
+                    <a href="#">in</a>
+                    <a href="#">Tw</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu">
+            <div class="header__mobile">
+                <div class="header__mobile__logo">
+                    <a href="#">Aer</a>
+                </div>
+                <div class="hamburger" onclick="changeButton(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div id="mobileNav" class="overlay">
+                    <div class="header__mobile__container">
+                        <div class="nav__list">
+                            <ul>
+                                <li><img src="images/bx_search.png" alt="search icon"></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Location</a></li>
+                                <li><a href="#">Cart</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__socials">
+                            <a href="#">Fb</a>
+                            <a href="#">in</a>
+                            <a href="#">Tw</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <nav>
+                <ul>
+                    <li class="main-nav__item"><a href="#" class="main-nav--active">Home</a></li>
+                    <li class="main-nav__item"><a href="#">Products</a></li>
+                    <li class="main-nav__item"><a href="#">About</a></li>
+                    <li class="main-nav__item"><a href="#">Location</a></li>
+                    <li class="main-nav__item"><a href="#">Cart</a></li>
+                    <li class="main-nav__item"><img src="images/bx_search.png" alt="search icon"></li>
+                </ul>
+            </nav>
+            <div class="main-menu__first">
+                <div class="first-list">
+                    <p>/01</p>
+                    <ul class="first-list__items">
+                        <li class="first-list__item first-list--main"><a href="#">Work Collection</a></li>
+                        <li class="first-list__item "><a href="#">Active Collection</a></li>
+                        <li class="first-list__item "><a href="#">Travel Collection</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="space"></div> -->
+                <div class="second-list">
+                    <h1>Work <br> Anywhere</h1>
+                    <p>Introducing the work collection, a line of minimalistic
+                        bags designed for new generation specifically for
+                        the modern professionals.</p>
+                </div>
+            </div>
+
+            <div class="main-menu__second">
+                <div class="event">
+                    <p>EVENTS</p>
+                    <div class="event__content">
+                        <div class="event__date">
+                            <p>Pop-up @Steven Alan</p>
+                            <p>SF - Sat, August 12 / 5-8PM</p>
+                        </div>
+                        <div class="event__date">
+                            <p>Pop-up @Steven Alan</p>
+                            <p>SF - Sat, August 12 / 5-8PM</p>
+                        </div>
+                    </div>
+                    <span class="three-dots">...</span>
+                </div>
+                <div class="news">
+                    <div class="news__img">
+                        <img src="images/laptop.png" alt="news image">
+                    </div>
+                    <div class="news__content">
+                        <p class="content__title">NEWS</p>
+                        <p class="content__news">Introducing the work collection, a line of minimalistic bags designed
+                            for new generation
+                            specifically for the modern professionals.</p>
+                        <p class="content__read-more"><a href="#">Read More...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var open = true;
+        
+        function changeButton(i) {
+            i.classList.toggle("change");
+            document.getElementById("mobileNav").classList.toggle("show-nav");
+            if (open) {
+                document.body.style.overflow = "hidden";
+                open = !open;
+            } else {
+                document.body.style.overflow = "auto";
+                open = !open;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

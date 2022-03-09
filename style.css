@@ -1,0 +1,416 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+main {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	background: no-repeat bottom -20px right 50%/50% url("images/bag.png"),
+		linear-gradient(112.29deg, #39393A 20.81%, #161618 100%);
+	color: #FFFFFF;
+}
+
+.side-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-right: 1px solid #707070;
+	padding: 1rem;
+	flex: 0 1 auto;
+}
+
+.side-header__logo {
+	text-align: center;
+	flex: 2;
+}
+
+.side-header__logo a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.side-header__socials {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex: 1 0 auto;
+}
+
+.side-header__socials--reverse {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+
+.side-header__socials--reverse a {
+	text-decoration: none;
+	color: #808080;
+	margin: 1.8rem;
+	font-weight: 700;
+	font-size: 1.5rem;
+	transform: rotate(-90deg);
+}
+
+.main-menu {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	justify-content: space-between;
+}
+
+.header__mobile {
+	display: none;
+	justify-content: space-between;
+	width: 100vw;
+	margin-bottom: 3rem;
+	padding: 2rem;
+}
+
+.header__mobile__logo a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.overlay {
+	height: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 6rem;
+	left: 0;
+	background-color: #707070;
+	overflow: hidden;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.overlay.show-nav {
+	height: 100%;
+}
+
+
+.header__mobile__container {
+	display: flex;
+	height: 70vh;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__list {
+	margin-top: 2rem;
+}
+
+.nav__list ul {
+	padding: 0;
+	text-align: center;
+}
+
+.nav__list ul li {
+	list-style: none;
+	margin: 2rem;
+}
+
+.nav__list ul li a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 1.2rem;
+}
+
+.nav__socials a {
+	text-decoration: none;
+	margin: 1rem;
+	color: #FFFFFF;
+}
+
+.hamburger {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 3px;
+	background-color: #FFFFFF;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 7px);
+	transform: rotate(-45deg) translate(-6px, 7px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-6px, -7px);
+	transform: rotate(45deg) translate(-6px, -7px);
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.main-nav__item {
+	display: inline-block;
+	margin: 1.1rem 2rem;
+}
+
+.main-nav__item img {
+	width: 20px;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.main-nav__item a {
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-bottom: 0.3rem;
+	position: relative;
+}
+
+.main-nav__item a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	margin: -5px 0;
+	background-color: #EFC862;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.main-nav__item a:hover::before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+.main-nav__item a.main-nav--active::before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+.main-menu__first {
+	display: flex;
+	justify-content: space-between;
+	gap: 30%;
+	margin-top: -6rem;
+}
+
+.first-list {
+	margin-left: 3rem;
+	flex: 1 1 auto;
+}
+
+.first-list p {
+	position: relative;
+	font-size: 1.2rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #707070;
+	width: 80%;
+}
+
+.first-list p::before {
+	position: absolute;
+	background: #EFC862;
+	height: 1px;
+	content: '';
+	width: 80%;
+	bottom: -1px;
+	left: 0;
+}
+
+.first-list__items {
+	list-style: none;
+	padding: 0;
+	margin-top: 2rem;
+}
+
+.first-list__item a {
+	color: #707070;
+	line-height: 2.2rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.first-list--main a {
+	color: #FFFFFF;
+	font-size: 1.2rem;
+}
+
+.second-list {
+	flex: 1 1 auto;
+	max-width: 40%;
+	margin-right: 5%;
+}
+
+.second-list h1 {
+	font-size: 3rem;
+	margin: 0.5rem 0;
+}
+
+.second-list p {
+	margin-top: 1rem;
+	max-width: 80%;
+}
+
+.main-menu__second {
+	display: flex;
+	height: 27%;
+	background: rgba(0, 0, 0, 0.41);
+	margin-left: -1px;
+	backdrop-filter: blur(30px);
+	gap: 5%;
+}
+
+.event {
+	margin-left: 3rem;
+	flex: 3 1 0;
+}
+
+.event>p {
+	margin-top: 2rem;
+	margin-bottom: 0;
+	font-weight: 700;
+}
+
+.event div p:first-child {
+	margin-bottom: 0.5rem;
+	color: #969191;
+}
+
+.event p:last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.event__content {
+	display: flex;
+	gap: 2rem;
+}
+
+.three-dots {
+	font-size: 2rem;
+}
+
+.news {
+	display: flex;
+	flex: 4 1 0;
+	gap: 5%;
+	margin-right: 3rem;
+}
+
+.news__img {
+	display: flex;
+	width: 90%;
+	height: 100%;
+}
+
+.news__img img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.content__title {
+	margin-top: 2rem;
+	margin-bottom: 0;
+	font-weight: 700;
+}
+
+.content__news {
+	text-align: justify;
+}
+
+.content__read-more a {
+	text-decoration: none;
+	color: #EFC862;
+	font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+	main {
+		height: 100%;
+		background: no-repeat bottom 620px right -50%/90% url("images/bag.png"),
+			linear-gradient(112.29deg, #39393A 20.81%, #161618 100%);
+	}
+
+	.side-header {
+		display: none;
+	}
+
+	.header__mobile {
+		display: flex;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.main-menu__first {
+		flex-direction: column;
+		margin-top: 1rem;
+	}
+
+	.first-list {
+		margin: 2rem;
+	}
+
+	.second-list {
+		margin: 2rem;
+		max-width: 100%;
+	}
+
+	.second-list h1 {
+		font-size: 2.5rem;
+	}
+
+	.main-menu__second {
+		flex-direction: column;
+		height: 100%;
+		padding: 2rem;
+		margin-left: 0;
+		gap: 0;
+	}
+
+	.event {
+		margin: 0 0 2rem 0;
+	}
+
+	.event__content {
+		gap: 1.2rem;
+	}
+
+	.news {
+		margin: 0;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.news__img {
+		width: 100%;
+	}
+}
